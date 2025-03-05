@@ -36,17 +36,29 @@ public class Main {
         frame.setVisible(true);
         Frame frame2 = new Frame(circulo);
         frame2.setVisible(true);
+        Caja<Integer> entero = new Caja<>(5);
+        System.out.println(entero.getContenido());
+        Caja<String> cadena = new Caja<>("Hola");
+        System.out.println(cadena.getContenido());
+        Caja<Double> decimal = new Caja<>(5.5);
+        System.out.println(decimal.getContenido());
+        System.out.println("El factorial de 5 es "+factorial(5).toString());
+    }
+
+    public static Integer factorial (Integer n) {
+        return (n == 0) ? 1 : n * factorial(n - 1);
     }
 
     public static void tiposDeDatos() {
         byte _byte = 1;         // 1 bytes. Números de -128 a 127;
         short _short = 2;       // 2 bytes. Números de -32768 a 32767;
-        int _int = 3;           // 4 bytes. Números de -2147483648 a 2147483647
+        int _int = 3;           // 4 bytes. Números de -2147483648 a 2147483647i
         long _long = 4L;        // 8 bytes. Números de -2^63 hasta 2^63 - 1.
         float _float = 5.0f;    // 4 bytes. Números decimales con 6 a 7 dígitos decimales.
         double _double = 6.0;   // 8 bytes. Números decimales con 15 dígitos decimales.
         char _char = 'A';       // 2 bytes. Almacena un caracter.
         boolean _boolean = true;// 1 bit.
+        Byte byteObj = 1;         // Objeto de tipo Byte.
         String _string = "Hello";
         // Los string no admiten sobrecarga de ==. Se usa equals.
         if (_string == "Hola") {
@@ -56,9 +68,7 @@ public class Main {
         System.out.println("Compare:"+_string.compareTo("Hola"));
     }
     public static void stringBuilder() {
-        String str = new String("Hola");
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(str);
+        StringBuilder stringBuilder = new StringBuilder("Hola");
         stringBuilder.append(" Mundo!!");
         System.out.println(stringBuilder.toString());
     }
@@ -91,7 +101,8 @@ public class Main {
     }
 
     public static void colecciones () {
-        var arrayList = new ArrayList<String>();
+        var arrayList = new ArrayList<>();
+        System.out.println(arrayList.hashCode());
         arrayList.add("Hola");
         arrayList.add(" Mundo!!");
         System.out.println(arrayList);

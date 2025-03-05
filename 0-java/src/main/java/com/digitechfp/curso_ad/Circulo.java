@@ -27,4 +27,7 @@ public class Circulo extends Poligono {
     public void dibuja (Graphics g) {
         g.drawOval((int)x, (int)y, (int)radio, (int)radio);
     }
+    public double diametro() {
+        return 2 * radio;
+    }
 }

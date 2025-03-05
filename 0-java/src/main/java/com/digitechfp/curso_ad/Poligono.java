@@ -13,8 +13,10 @@ abstract public class Poligono implements IPoligono, IDibujable{
     Poligono() {
         this(0, 0);
     }
+    //region Abstract Methods
     abstract public double area();
     abstract public double perimetro();
+    //endregion
     public void mover(double x, double y) {
         this.x += x;
         this.y += y;
