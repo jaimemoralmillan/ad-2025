@@ -2,7 +2,7 @@ package com.digitechfp.curso_ad;
 
 import java.awt.*;
 
-abstract public class Poligono implements IPoligono, IDibujable{
+abstract public class Poligono implements IPoligono {
     protected double x;
     protected double y;
 
