@@ -1,6 +1,6 @@
 package com.digitechfp.curso_ad;
 
-public interface IPoligono
+public interface IPoligono extends IDibujable
 {
     double area();
     double perimetro();

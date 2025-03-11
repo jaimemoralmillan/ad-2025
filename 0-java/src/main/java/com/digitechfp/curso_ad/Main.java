@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+
+        System.out.println(factorial(5));        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
@@ -26,10 +27,10 @@ public class Main {
         colas();
         pilas();
         expresionesRegulares();
-        Poligono circulo = new Circulo(200, 200, 50);
+        IPoligono circulo = new Circulo(200, 200, 50);
         System.out.println("Circulo area:"+circulo.area());
         System.out.println("Circulo perimetro:"+circulo.perimetro());
-        Poligono rectangulo = new Rectangulo(200, 200, 50, 100);
+        IPoligono rectangulo = new Rectangulo(200, 200, 50, 100);
         System.out.println("Rectangulo area:"+rectangulo.area());
         System.out.println("Rectangulo perimetro:"+rectangulo.perimetro());
         Frame frame = new Frame(rectangulo);
@@ -47,6 +48,18 @@ public class Main {
 
     public static Integer factorial (Integer n) {
         return (n == 0) ? 1 : n * factorial(n - 1);
+    }
+
+    public static Integer factorial2 (Integer n) {
+        Integer resultado = 1;
+        for (int i = 1; i <= n; i++) {
+            resultado *= i;
+        }
+        return resultado;
+    }
+    public static Integer factorial3 (Integer n) {
+        var resultado = (n==0) ? 1 : n * factorial3(n - 1);
+        return resultado;
     }
 
     public static void tiposDeDatos() {

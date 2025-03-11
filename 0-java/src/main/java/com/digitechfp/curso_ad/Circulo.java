@@ -30,4 +30,7 @@ public class Circulo extends Poligono {
     public double diametro() {
         return 2 * radio;
     }
+    public void mover (double x, double y, double offset) {
+       super.mover(x+offset, y);
+    }
 }

@@ -5,8 +5,10 @@ package com.digitechfp.curso_ad;
  *
  * @param <T> the type parameter
  */
+// public class Caja<T extends IPoligono, E extends IDibujable> {
 public class Caja<T> {
     private T contenido;
+    // private E otroContenido;
 
     /**
      * Instantiates a new Caja.

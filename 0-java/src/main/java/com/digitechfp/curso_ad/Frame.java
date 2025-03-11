@@ -4,15 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Frame extends JFrame {
-    private final Poligono poligono;
+    private IPoligono poligono;
     public IDibujable dibujaTitulo = new IDibujable() {
         @Override
         public void dibuja(Graphics g) {
             g.drawString("Titulo", 50, 50);
         }
     };
-
-    public Frame(Poligono poligono) {
+    public IDibujable dtitulo = (g) -> {
+        g.drawString("Titulo", 50, 50);
+    };
+    public Frame(IPoligono poligono) {
         this.poligono = poligono;
         setTitle("Dibuja Poligono");
         setSize(400, 400);
